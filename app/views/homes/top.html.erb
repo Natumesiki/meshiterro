@@ -1,6 +1,8 @@
 <h1>Topページ</h1>
+<%= form_with model: @meal, url:'/meal' do |f| %>
 
 <h4>画像</h4>
   <%= f.file_field :image, accept: "image/*" %>
 
   <%= f.submit '投稿' %>
+  <%end%>
