@@ -1,23 +1,18 @@
 require "test_helper"
 
-class MealsControllerTest < ActionDispatch::IntegrationTest
+class PostImagesControllerTest < ActionDispatch::IntegrationTest
   test "should get new" do
-    get meals_new_url
+    get post_images_new_url
     assert_response :success
   end
 
   test "should get index" do
-    get meals_index_url
+    get post_images_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get meals_show_url
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get meals_edit_url
+    get post_images_show_url
     assert_response :success
   end
 end
