@@ -1,17 +1,19 @@
 class UsersController < ApplicationController
-   before_action :authenticate_user!, only: [:show]
+   before_action :authenticate_user!, only: [:show,:edit]
 
   def show
     @user = User.find(params[:id])
     @post_images = @user.post_images
-
+    @user = current_user.id
   end
 
-  def create
-    @user = User.find(params[:id])
-    @user.user_id = current_user.id
-    redirect_to  '/post_images'
-  end
+  #   def create
+  #   @user = User.show(user_params)
+  #   @user = current_user.id
+  #   @user.save
+  #   redirect_to user_path
+  # end
+
 
   def edit
     @user = User.find(params[:id])
