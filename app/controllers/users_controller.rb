@@ -3,16 +3,16 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @post_images = @user.post_images
-    @user = current_user.id
+    @post_images = @user.post_image
+
   end
 
-  #   def create
-  #   @user = User.show(user_params)
-  #   @user = current_user.id
-  #   @user.save
-  #   redirect_to user_path
-  # end
+   def create
+    # @user = User.show(user_params)
+     @user = current_user.id
+
+     redirect_to user_path.
+   end
 
 
   def edit
@@ -32,3 +32,5 @@ class UsersController < ApplicationController
   end
 
 end
+end
+
