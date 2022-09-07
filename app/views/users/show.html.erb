@@ -8,8 +8,9 @@
   <% if @user == current_user %>
 
  <P><%=link_to "プロフィール編集",edit_user_path(@user)%></P>
-</div>
 <% end %>
+</div>
+
 
 <% @post_images.each do |post_image| %>
 
@@ -25,6 +26,8 @@
   <p>説明: <%= post_image.caption %></p>
 
   <p>ユーザーネーム:<%= post_image.user.name %></p>
+
+  <P><%= link_to "#{post_image.post_comments.count} コメント", post_image_path(post_image.id)%></P>
 
 </div>
 
